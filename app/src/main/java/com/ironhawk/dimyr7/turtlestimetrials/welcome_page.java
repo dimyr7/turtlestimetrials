@@ -6,13 +6,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 public class welcome_page extends Activity {
-    Button logo_button = (Button)findViewById(R.id.logo_button);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);
+        ImageButton logo_button = (ImageButton)findViewById(R.id.logo_button);
         logo_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){

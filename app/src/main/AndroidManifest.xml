@@ -20,6 +20,10 @@
             android:name=".enter_swimmers"
             android:label="@string/title_activity_enter_swimmers" >
         </activity>
+        <activity
+            android:name=".activity_swim_set"
+            android:label="@string/title_activity_activity_swim_set" >
+        </activity>
     </application>
 
 </manifest>

@@ -2,5 +2,12 @@
     <string name="app_name">Turtles Time Trials</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_enter_swimmers">enter_swimmers</string>
-    <string name="enter_swimmers_text">Please enter the swimmers in each lane</string>
+    <string name="enter_swimmers_text">Please enter the swimmers in their appropriate lane in the order they will be starting</string>
+    <string name="lane1_text">Lane 1</string>
+    <string name="lane2_text">Lane 2</string>
+    <string name="lane3_text">Lane 3</string>
+    <string name="next_button">Next</string>
+    <string name="title_activity_activity_swim_set">activity_swim_set</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

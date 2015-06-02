@@ -1,14 +1,225 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/acrivity_enter_swimmers"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.ironhawk.dimyr7.turtlestimetrials.enter_swimmers"
-    android:id="@+id/acrivity_enter_swimmers">
+    tools:context="com.ironhawk.dimyr7.turtlestimetrials.enter_swimmers">
 
-    <TextView android:text="@string/enter_swimmers_text" android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/enter_swimmers_text" />
+        android:id="@+id/editText"
+        android:layout_gravity="right" />
 
-</RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/enter_swimmers_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#c3ffbb"
+                android:text="@string/enter_swimmers_text"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lane1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/enter_swimmers_text"
+                android:text="@string/lane1_text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/lane1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1_4"
+                android:capitalize="words"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/lane1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane1_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1_1"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane1_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane1_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/lane1_4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lane2_text"
+                android:id="@+id/lane2"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/lane2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1_4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1_1"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane2_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane2_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/lane1_4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lane3_text"
+                android:id="@+id/lane3"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/lane3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1_4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane3_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1_1"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane3_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lane1"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/lane3_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/lane1_4"
+                android:capitalize="words"
+                android:lines="1"
+                android:singleLine="true"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next_button"
+                android:id="@+id/next_button"
+                android:background="#19bf30"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"></LinearLayout>
+</LinearLayout>
