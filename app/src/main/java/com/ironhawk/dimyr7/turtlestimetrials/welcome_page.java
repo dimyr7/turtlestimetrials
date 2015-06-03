@@ -1,6 +1,7 @@
 package com.ironhawk.dimyr7.turtlestimetrials;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +19,9 @@ public class welcome_page extends Activity {
         logo_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                setContentView(R.layout.activity_enter_swimmers);
+                Intent myIntent = new Intent(v.getContext(), enter_swimmers.class );
+                startActivity(myIntent);
+                finish();
             }
         });
     }

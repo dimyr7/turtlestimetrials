@@ -10,4 +10,9 @@
     <string name="title_activity_activity_swim_set">activity_swim_set</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_set_info">set_info</string>
+    <string name="number_of_swims">Enter the number of heats</string>
+    <string name="time_between_heats">Enter the time in seconds between heats</string>
+    <string name="heats_hint">Number of heats</string>
+    <string name="pause_hint">Time between heats</string>
 </resources>

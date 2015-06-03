@@ -9,32 +9,45 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ironhawk.dimyr7.turtlestimetrials.enter_swimmers">
 
-    <EditText
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_gravity="right" />
-
-    <ScrollView
-        android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/enter_swimmers_text"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/enter_swimmers_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#c3ffbb"
-                android:text="@string/enter_swimmers_text"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+            android:background="#c3ffbb"
+            android:text="@string/enter_swimmers_text"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_gravity="left"
+            android:gravity="left" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:text="@string/next_button"
+            android:id="@+id/next_button1"
+            android:background="#19bf30"
+            android:layout_gravity="right"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/lane1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/enter_swimmers_text"
@@ -87,10 +100,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/lane1_4"
                 android:capitalize="words"
                 android:lines="1"
                 android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -148,6 +166,12 @@
                 android:capitalize="words"
                 android:lines="1"
                 android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -205,21 +229,7 @@
                 android:capitalize="words"
                 android:lines="1"
                 android:singleLine="true"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next_button"
-                android:id="@+id/next_button"
-                android:background="#19bf30"
-                android:layout_gravity="right" />
-
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"></LinearLayout>
 </LinearLayout>
