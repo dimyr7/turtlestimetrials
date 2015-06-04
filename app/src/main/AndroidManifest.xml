@@ -28,6 +28,14 @@
             android:name=".set_info"
             android:label="@string/title_activity_set_info" >
         </activity>
+        <activity
+            android:name=".intervals"
+            android:label="@string/title_activity_intervals" >
+        </activity>
+        <activity
+            android:name=".logging"
+            android:label="@string/title_activity_logging" >
+        </activity>
     </application>
 
 </manifest>

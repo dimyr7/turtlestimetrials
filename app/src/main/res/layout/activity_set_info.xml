@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
         android:ems="10"
-        android:id="@+id/heats"
+        android:id="@+id/swims"
         android:layout_gravity="center"
         android:textAlignment="center"
         android:hint="@string/heats_hint" />

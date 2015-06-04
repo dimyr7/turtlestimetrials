@@ -42,29 +42,11 @@ public class enter_swimmers extends Activity {
                         String name = swimmers[i][j].getText().toString();
                         if(!name.equals("")){
                             SwimSet.setSwimmer(i, j, name);
+                            SwimSet.setNumSwimmersInLane(i, j+1);
                         }
                     }
                 }
-                int maxSwimmerPerLane = 4;
-                for(int i = 0; i < 5; i++){
-                    String t1 = swimmers[0][i].getText().toString();
-                    String t2 = swimmers[1][i].getText().toString();
-                    String t3 = swimmers[2][i].getText().toString();
-                    if(t1.equals("") && t2.equals("") && t3.equals("")){
-                        maxSwimmerPerLane = i-1;
-                        break;
-                    }
-                }
-                if(maxSwimmerPerLane == -1) {
-                    swimmers[0][0].setHint("Please");
-                    swimmers[1][0].setHint("Enter");
-                    swimmers[2][0].setHint("At");
-                    swimmers[0][1].setHint("Least");
-                    swimmers[1][1].setHint("One");
-                    swimmers[2][1].setHint("Person");
-                    return;
-                }
-                SwimSet.setMaxSwimmerPerLane(maxSwimmerPerLane);
+
                 Intent myIntent = new Intent(v.getContext(), set_info.class);
                 startActivity(myIntent);
                 finish();

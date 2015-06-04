@@ -9,16 +9,16 @@ import java.util.ArrayList;
 public class SwimSet {
     private static String[][] swimmers = new String[3][5];
     private static int repeatTimes;
-    private static int maxSwimmerPerLane;
+    private static int[] numSwimmersInLane = new int[3];
 
-    private static ArrayList<Long> intervals = new ArrayList<>();
+    private static ArrayList<Long> intervals = new ArrayList<Long>();
     private static long startTime;
     private static long pauseTime;
 
 
-    private static ArrayList<Integer> laneLog = new ArrayList<>();
-    private static ArrayList<Integer> heatLog = new ArrayList<>();
-    private static ArrayList<Long> timeLog = new ArrayList<>();
+    private static ArrayList<Integer> laneLog = new ArrayList<Integer>();
+    private static ArrayList<Integer> heatLog = new ArrayList<Integer>();
+    private static ArrayList<Long> timeLog = new ArrayList<Long>();
 
     public static void setSwimmer(int lane, int swimmer, String name) {
         swimmers[lane][swimmer] = name;
@@ -34,8 +34,8 @@ public class SwimSet {
         return repeatTimes;
     }
 
-    public static void pushInterval(int time){
-        intervals.add((long)time);
+    public static void addInterval(long time){
+        intervals.add(time);
     }
     public static long getInterval(int i){
         return intervals.get(i);
@@ -46,13 +46,6 @@ public class SwimSet {
     }
     public static long getStartTime(){
         return startTime;
-    }
-
-    public static void setMaxSwimmerPerLane(int num){
-        maxSwimmerPerLane = num;
-    }
-    public static int getMaxSwimmerPerLane(){
-        return maxSwimmerPerLane;
     }
 
     public static void newLogEntry(int lane, int heat){
@@ -75,6 +68,13 @@ public class SwimSet {
     }
     public static long getPauseTime(){
         return pauseTime;
+    }
+
+    public static void setNumSwimmersInLane(int lane, int amt){
+        numSwimmersInLane[lane]=amt;
+    }
+    public static int getNumSwimmersInLane(int lane){
+        return numSwimmersInLane[lane];
     }
 
 }

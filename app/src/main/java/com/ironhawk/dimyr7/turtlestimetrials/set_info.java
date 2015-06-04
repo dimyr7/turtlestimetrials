@@ -2,6 +2,7 @@ package com.ironhawk.dimyr7.turtlestimetrials;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class set_info extends Activity {
@@ -23,18 +25,18 @@ public class set_info extends Activity {
             public void onClick(View v) {
                 TextView s1 = (TextView)findViewById(R.id.set_info1);
                 TextView s2 = (TextView)findViewById(R.id.set_info2);
-                EditText heatsText = (EditText)findViewById(R.id.heats);
-                String heatsStr = heatsText.getText().toString();
-                if(heatsStr.equals("") || heatsStr.equals("-")){
+                EditText swimsText = (EditText)findViewById(R.id.swims);
+                String swimsStr = swimsText.getText().toString();
+                if(swimsStr.equals("") || swimsStr.equals("-")){
                     s1.setText("Please enter a valid positive number");
-                    heatsText.setText("");
+                    swimsText.setText("");
                     return;
                 }
-                int numHeats = Integer.parseInt(heatsStr);
-                if(numHeats<=0){
+                int numSwims = Integer.parseInt(swimsStr);
+                if(numSwims<=0){
 
                     s1.setText("Please enter a valid positive number");
-                    heatsText.setText("");
+                    swimsText.setText("");
                     return;
                 }
 
@@ -42,7 +44,7 @@ public class set_info extends Activity {
                 String pauseStr = pauseText.getText().toString();
                 if(pauseStr.equals("") || pauseStr.equals("-")){
                     s2.setText("Please enter a valid positive number");
-                    heatsText.setText("");
+                    pauseText.setText("");
                     return;
                 }
                 long numPause = Long.parseLong(pauseStr)*1000;
@@ -54,11 +56,14 @@ public class set_info extends Activity {
                 }
 
 
-                SwimSet.setRepeatTimes(numHeats);
+                SwimSet.setRepeatTimes(numSwims);
                 SwimSet.setPauseTime(numPause);
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(pauseText.getWindowToken(), 0);
-                setContentView(R.layout.activity_welcome_page);
+
+                Intent myIntent = new Intent(v.getContext(), intervals.class);
+                startActivity(myIntent);
+                finish();
 
             }
         });
