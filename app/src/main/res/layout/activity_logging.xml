@@ -1,14 +1,42 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.ironhawk.dimyr7.turtlestimetrials.logging"
-    android:id="@+id/Rel">
+    android:id="@+id/logging_relative"
+    android:orientation="vertical">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/wowow" />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="@string/lane3_text"
+        android:id="@+id/logging_lane3"
+        android:background="#ff147520"
+        android:textAlignment="center"
+        android:layout_gravity="left"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false" />
 
-</RelativeLayout>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="@string/lane2_text"
+        android:id="@+id/logging_lane2"
+        android:background="#19bf30"
+        android:textAlignment="center"
+        android:layout_gravity="left"
+
+        android:layout_alignParentStart="false" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="@string/lane1_text"
+        android:id="@+id/logging_lane1"
+        android:background="#ff147520"
+        android:textAlignment="center"
+        android:layout_gravity="left"
+        android:layout_alignParentStart="true" />
+</LinearLayout>

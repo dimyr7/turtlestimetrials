@@ -12,6 +12,9 @@ import android.widget.ProgressBar;
 
 public class welcome_page extends Activity {
     @Override
+    /*
+    TODO change title of all activities
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);

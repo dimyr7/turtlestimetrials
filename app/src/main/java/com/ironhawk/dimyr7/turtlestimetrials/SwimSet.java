@@ -48,10 +48,10 @@ public class SwimSet {
         return startTime;
     }
 
-    public static void newLogEntry(int lane, int heat){
+    public static void newLogEntry(int lane, int heat, long time){
         laneLog.add((Integer)lane);
         heatLog.add((Integer)heat);
-        timeLog.add((Long)System.currentTimeMillis());
+        timeLog.add((Long)time);
     }
     public static ArrayList<Integer> getLaneLog(){
         return laneLog;
@@ -76,5 +76,7 @@ public class SwimSet {
     public static int getNumSwimmersInLane(int lane){
         return numSwimmersInLane[lane];
     }
+
+
 
 }

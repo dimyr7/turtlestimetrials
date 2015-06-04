@@ -78,6 +78,9 @@ public class intervals extends Activity {
                     View child = mLayout.getChildAt(i);
                     if(child instanceof EditText){
                         String[] timeStr = ((EditText) child).getText().toString().split(":");
+                        /*
+                        TODO make the : delimiter optional
+                         */
                         long time = Long.parseLong(timeStr[0])*60000+Long.parseLong(timeStr[1])*1000;
                         if(check.isChecked()){
                             int numSwims = SwimSet.getRepeatTimes();
