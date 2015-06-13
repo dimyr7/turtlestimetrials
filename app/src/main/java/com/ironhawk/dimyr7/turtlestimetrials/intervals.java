@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class intervals extends Activity {
         setContentView(R.layout.activity_intervals);
 
         check = (CheckBox)findViewById(R.id.sameIntervalCheck);
-        mLayout = (LinearLayout)findViewById(R.id.intervals_linearLayout);
+        mLayout = (LinearLayout)findViewById(R.id.intervalLinLayout2);
         example = (EditText)findViewById(R.id.timeEx);
         numOfSwims = SwimSet.getRepeatTimes();
         start = (Button)findViewById(R.id.intervals_start);
@@ -73,15 +74,35 @@ public class intervals extends Activity {
         return new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                if(check.isChecked()){
+                    EditText child = (EditText)findViewById(R.id.timeEx);
+                    if(child.getText().toString().equals("")){
+                        return;
+                    }
+                }
+                else{
+                    int childCount = mLayout.getChildCount();
+                    for(int i = 0; i < childCount; i++){
+                        View child = mLayout.getChildAt(i);
+                        if(child instanceof EditText){
+                            if(((EditText) child).getText().toString().equals("")){
+                                return;
+                            }
+                        }
+                    }
+                }
                 int childCount = mLayout.getChildCount();
                 for(int i = 0; i < childCount; i++){
                     View child = mLayout.getChildAt(i);
                     if(child instanceof EditText){
                         String[] timeStr = ((EditText) child).getText().toString().split(":");
-                        /*
-                        TODO make the : delimiter optional
-                         */
-                        long time = Long.parseLong(timeStr[0])*60000+Long.parseLong(timeStr[1])*1000;
+                        long time;
+                        if(timeStr.length == 1){
+                            time = Long.parseLong(timeStr[0])*1000;
+                        }
+                        else {
+                            time = Long.parseLong(timeStr[0]) * 60000 + Long.parseLong(timeStr[1]) * 1000;
+                        }
                         if(check.isChecked()){
                             int numSwims = SwimSet.getRepeatTimes();
                             for(int j = 0; j<numSwims;j++ ){
@@ -110,7 +131,6 @@ public class intervals extends Activity {
         getMenuInflater().inflate(R.menu.menu_intervals, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

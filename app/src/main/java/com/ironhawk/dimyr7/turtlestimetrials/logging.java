@@ -39,10 +39,18 @@ public class logging extends Activity {
         lanes[1] = (Button)findViewById(R.id.logging_lane2);
         lanes[0] = (Button)findViewById(R.id.logging_lane1);
 
+
+
         for(int i = 0; i <3; i++){
             numSwimmersPerLane[i] = SwimSet.getNumSwimmersInLane(i);
             leadInLane[i] = 0;
             flags[i] = false;
+            if(numSwimmersPerLane[i] == 0){
+                flags[i] = true;
+                lanes[i].setText("");
+                lanes[i].setBackgroundColor(256*256*256-1);
+
+            }
             for(int j = 0; j < numSwimmersPerLane[i]; j++){
                 swimsMade[i][j]=0;
                 startTimes[i][j] = System.currentTimeMillis()+SwimSet.getPauseTime()*j;
@@ -84,13 +92,11 @@ public class logging extends Activity {
                     flags[lane] = true;
                     lanes[lane].setText("");
                     lanes[lane].setBackgroundColor(256*256*256-1);
-
                 }
                 if(flags[0] && flags[1] && flags[2]){
-                    /*
-                    TODO go to data sheet view
-                     */
-                    setContentView(R.layout.activity_welcome_page);
+                    Intent myIntent = new Intent(v.getContext(), spreadsheet.class);
+                    startActivity(myIntent);
+                    finish();
                 }
             }
         };

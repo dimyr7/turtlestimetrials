@@ -21,10 +21,6 @@
             android:label="@string/title_activity_enter_swimmers" >
         </activity>
         <activity
-            android:name=".activity_swim_set"
-            android:label="@string/title_activity_activity_swim_set" >
-        </activity>
-        <activity
             android:name=".set_info"
             android:label="@string/title_activity_set_info" >
         </activity>
@@ -35,6 +31,10 @@
         <activity
             android:name=".logging"
             android:label="@string/title_activity_logging" >
+        </activity>
+        <activity
+            android:name=".spreadsheet"
+            android:label="@string/title_activity_spreadsheet" >
         </activity>
     </application>
 
